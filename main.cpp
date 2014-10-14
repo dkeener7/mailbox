@@ -57,7 +57,7 @@ int main2 ()
 
     msg m;
 
-    sleep(2);
+    sleep(2);  // wait for queue to get set up
 
     message_queue *mq;
     try{
@@ -84,7 +84,7 @@ int main2 ()
             if ( !mq->try_receive(&m, size_t(8192), recvd_size, priority) )
                 return 1;
             std::cout << getpid() << ":Received:" << m.n << std::endl;
-//      sleep(1);
+
         }
     }
     catch(interprocess_exception &ex){
