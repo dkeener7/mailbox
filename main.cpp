@@ -39,7 +39,7 @@ int main1 ()
 
     try {
         //Send 100 numbers
-        for(int i = 0; i < 1000; ++i){
+        for(int i = 0; i < 100; ++i){
             m.n = i;
             mq->send(&m, sizeof(m), 0);
         }
@@ -83,7 +83,7 @@ int main2 ()
 
     try {
         //Receive 100 numbers
-        for(int i = 0; i < 1000; ++i){
+        for(int i = 0; i < 100; ++i){
 
             if ( !mq->try_receive(&m, size_t(8192), recvd_size, priority) )
                 return 1;
