@@ -9,6 +9,8 @@ using namespace boost::interprocess;
 // The writer sends messages and the reader receives them.  
 //
 
+const int NumMessages = 1000;
+
 int main1 ()
 {
     message_queue *mq;
@@ -39,7 +41,7 @@ int main1 ()
 
     try {
         //Send 1000 numbers
-        for(int i = 0; i < 1000; ++i){
+        for(int i = 0; i < NumMessages; ++i){
             m.n = i;
             mq->send(&m, sizeof(m), 0);
         }
@@ -83,7 +85,7 @@ int main2 ()
 
     try {
         //Receive 1000 numbers
-        for(int i = 0; i < 1000; ++i){
+        for(int i = 0; i < NumMessages; ++i){
 
             if ( !mq->try_receive(&m, size_t(8192), recvd_size, priority) )
                 return 1;
