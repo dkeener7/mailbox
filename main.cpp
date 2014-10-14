@@ -5,6 +5,10 @@
 
 using namespace boost::interprocess;
 
+// This program forks into to child procesess which open reader and writer ends of message queue.
+// The writer sends messages and the reader receives them.  Doh!
+//
+
 int main1 ()
 {
     message_queue *mq;
