@@ -24,7 +24,7 @@ int main1 ()
         mq = new message_queue
                 (create_only               //only create
                         ,"message_queue"           //name
-                        ,1024                       //max message number
+                        ,4096                       //max message number
                         ,size_t(8192)               //max message size
                 );
     }
@@ -63,7 +63,7 @@ int main2 ()
     try{
         //Open a message queue.
         mq = new message_queue
-                (open_only        //only create
+                (open_only        //only open
                         ,"message_queue"  //name
                 );
 
