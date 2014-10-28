@@ -105,6 +105,7 @@ int main2 ()
 int main ( int argc, char *argv[])
 {
 
+    // fork into parent and child processes
     if ( fork() == 0 )
         main1();
     else
