@@ -105,6 +105,8 @@ int main2 ()
 int main ( int argc, char *argv[])
 {
 
+    std::cout << "Starting..." << std::endl;
+
     if ( fork() == 0 )
         main1();
     else
