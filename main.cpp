@@ -107,6 +107,7 @@ int main ( int argc, char *argv[])
 
     std::cout << "Starting..." << std::endl;
 
+    // fork into parent and child processes
     if ( fork() == 0 )
         main1();
     else
