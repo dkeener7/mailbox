@@ -113,6 +113,8 @@ int main ( int argc, char *argv[])
     else
         main2();
 
+    std::cout << "Ending..." << std::endl;
+
     return 0;
 }
 
