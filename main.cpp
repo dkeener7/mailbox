@@ -22,6 +22,7 @@ int main1 ()
 
     msg m;
     memset(m.buf,'x',sizeof(m.buf));
+    std::cout << "Starting Writer..." << std::endl;
     try{
         //Erase previous message queue
         message_queue::remove("message_queue");
@@ -67,6 +68,8 @@ int main2 ()
 
     sleep(1);  // wait for queue to get set up
 
+    std::cout << "Starting Reader..." << std::endl;
+
     message_queue *mq;
     try{
         //Open a message queue.
@@ -108,7 +111,6 @@ int main2 ()
 int main ( int argc, char *argv[])
 {
 
-    std::cout << "Starting..." << std::endl;
 
     // fork into parent and child processes
     if ( fork() == 0 )
