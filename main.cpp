@@ -6,7 +6,7 @@
 using namespace boost::interprocess;
 
 // This program forks into to child processes which open reader and writer ends of message queue.
-// The writer sends messages and the reader receives them.  
+// The writer sends messages and the reader receives them.  It sends 1000 messages.
 //
 
 const int NumMessages = 1000;
@@ -105,6 +105,9 @@ int main2 ()
 int main ( int argc, char *argv[])
 {
 
+    std::cout << "Starting..." << std::endl;
+
+    // fork into parent and child processes
     if ( fork() == 0 )
         main1();
     else
