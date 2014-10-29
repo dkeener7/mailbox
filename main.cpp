@@ -11,6 +11,7 @@ using namespace boost::interprocess;
 
 const int NumMessages = 1000;
 
+// Writer process
 int main1 ()
 {
     message_queue *mq;
@@ -57,6 +58,7 @@ int main1 ()
     return 0;
 }
 
+// Reader process
 int main2 ()
 {
     struct msg {
