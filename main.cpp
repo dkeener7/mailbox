@@ -6,7 +6,7 @@
 using namespace boost::interprocess;
 
 // This program forks into to child processes which open reader and writer ends of message queue.
-// The writer sends messages and the reader receives them.  
+// The writer sends messages and the reader receives them.  It sends 1000 messages.
 //
 
 const int NumMessages = 1000;
