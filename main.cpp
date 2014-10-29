@@ -51,6 +51,8 @@ int main1 ()
         return 1;
     }
 
+    std::cout << "Ending Writer..." << std::endl;
+
     return 0;
 }
 
@@ -99,6 +101,7 @@ int main2 ()
         return 1;
     }
     message_queue::remove("message_queue");
+    std::cout << "Ending Reader..." << std::endl;
     return 0;
 }
 
@@ -113,7 +116,6 @@ int main ( int argc, char *argv[])
     else
         main2();
 
-    std::cout << "Ending..." << std::endl;
 
     return 0;
 }
