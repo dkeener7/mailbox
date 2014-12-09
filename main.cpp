@@ -113,6 +113,7 @@ int main2 ()
 int main ( int argc, char *argv[])
 {
 
+	std::cout << "Hi Larry" << std:endl;
 
     // fork into parent and child processes
     if ( fork() == 0 )
